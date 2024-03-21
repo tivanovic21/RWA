@@ -1,0 +1,113 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projekti",
+  "projects": {
+    "zadaca2": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "standalone": false
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true,
+          "standalone": false
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true,
+          "standalone": false
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projekti/zadaca2",
+      "sourceRoot": "projekti/zadaca2/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "../server/angular",
+            "index": "projekti/zadaca2/src/index.html",
+            "main": "projekti/zadaca2/src/main.ts",
+            "baseHref": "/",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projekti/zadaca2/tsconfig.app.json",
+            "assets": [
+              "projekti/zadaca2/src/favicon.ico",
+              "projekti/zadaca2/src/assets"
+            ],
+            "styles": [
+              "projekti/zadaca2/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                "replace":
+                "/projekti/zadaca2/src/environments/envirnoment.ts",
+                "with":
+                "/projekti/zadaca2/src/environments/envirnoment.prod.ts"
+                }],
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "zadaca2:build:production"
+            },
+            "development": {
+              "buildTarget": "zadaca2:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "zadaca2:build"
+          }
+        }
+      }
+    }
+  }
+}

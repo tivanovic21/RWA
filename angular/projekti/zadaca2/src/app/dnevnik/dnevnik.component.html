@@ -1,0 +1,21 @@
+<div *ngIf="!admin">Samo admin ima pristup dnevniku!</div>
+<div *ngIf="admin">
+    <table [border]="1">
+      <tr>
+        <th>ID</th>
+        <th>Metode</th>
+        <th>Datum</th>
+        <th>Resurs</th>
+        <th>Tijelo</th>
+        <th>Korime</th>
+      </tr>
+      <tr *ngFor="let podatak of dnevnikData">
+        <td>{{ podatak.id }}</td>
+        <td>{{ podatak.metode }}</td>
+        <td>{{ popraviDatum(podatak.datum) }}</td>
+        <td>{{ podatak.resurs }}</td>
+        <td>{{ podatak.tijelo }}</td>
+        <td>{{ podatak.imeKorisnika }}</td>
+      </tr>
+    </table>
+</div>

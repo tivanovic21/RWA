@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/tivanovic21.css" rel="stylesheet" type="text/css">
+    <title>Dokumentacija</title>
+</head>
+<body>
+    <h1>O MENI</h1>
+    <nav>#navigacija#</nav>
+    <div>
+        <ul class="card">
+            <li>Slika lica:
+                <ul>
+                    <li><img src="./profilna.jpeg" alt="slika lica" height="200px" width="auto"></li>
+                </ul>
+            </li>
+            <li>Ime i prezime:
+                <ul>
+                    <li>Toni Ivanović</li>
+                </ul>
+            </li>
+            <li>Email adresa:
+                <ul>
+                    <li>tivanovic21@student.foi.hr</li>
+                </ul>
+            </li>
+            <li>Slika ERA modela:
+                <ul>
+                    <li><a href="./era.png"><img src="era.png" alt="era model" width="400px" height="auto"></a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="card2">
+            <table id="tablica2">Tablica 2 iz dokumenta zadaće:
+                <thead>
+                    <tr>
+                        <th scope="col">Resurs (parametri)</th>
+                        <th scope="col">GET (čitanje)</th>
+                        <th scope="col">POST (kreiranje)</th>
+                        <th scope="col">PUT (ažuriranje)</th>
+                        <th scope="col">DELETE (brisanje)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>baza/korisnici</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                    </tr>
+                    <tr>
+                        <td>baza/korisnici/{korime}</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                    </tr>
+                    <tr>
+                        <td>baza/korisnici/{korime}/prijava</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                    </tr>
+                    <tr>
+                        <td>baza/favoriti</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                    </tr>
+                    <tr>
+                        <td>baza/favoriti/{id}</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                        <td>napravljeno</td>
+                    </tr>
+                    <tr>
+                        <td>baza/dnevnik?stranica=broj&sortiraj=[d | m][&datumOd=datum][&datumDo=datum][&vrijemeOd=vrijeme][&vrijemeOd=vrijeme]</td>
+                        <td>napravljen prikaz bez mogućnosti filtriranja i sortiranja</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Dnevnik daje samo mogućnost prikaza podataka, nije ih moguće filtrirati niti sortirati!</p>
+        <table id="tablica3">Tablica 3 iz dokumenta zadaće:
+            <thead>
+                <tr>
+                    <th scope="col">Uloga</th>
+                    <th scope="col">Stranica/e</th>
+                    <th scope="col">Opis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gost</td>
+                    <td>Početna</td>
+                    <td>napravljeno</td>
+                </tr>
+                <tr>
+                    <td>Gost/Korisnik</td>
+                    <td>SerijaDetalji</td>
+                    <td>napravljeno<br>
+                    napomena: pristupa se preko gumba prilikom pronalaska serije kroz tražilicu, inače neće pokazivati nikakve vrijednosti ako se pokuša pristupiti samo preko linka bez tmdbid-a serije
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gost</td>
+                    <td>Dokumentacija</td>
+                    <td>napravljeno</td>
+                </tr>
+                <tr>
+                    <td>Gost</td>
+                    <td>Prijava, Odjava</td>
+                    <td>napravljeno</td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>Profil</td>
+                    <td>napravljeno</td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>Favoriti</td>
+                    <td>napravljeno</td>
+                </tr>
+                <tr>
+                    <td>Korisnik</td>
+                    <td>FavoritiDetalji</td>
+                    <td>napravljeno<br>
+                        napomena: pristupa se preko gumba prilikom pregleda favorita na stranici favoriti, inače neće pokazivati nikakve vrijednosti ako se pokuša pristupiti samo preko linka bez id-a serije
+                    </td>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>Registracija</td>
+                    <td>napravljeno</td>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>Korisnici</td>
+                    <td>napravljeno</td>
+                </tr>
+                <tr>
+                    <td>Admin</td>
+                    <td>Dnevnik</td>
+                    <td>napravljen prikaz, ali nije moguće podatke filtirati ili sortirati</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Dnevnik daje samo mogućnost prikaza podataka, nije ih moguće filtrirati niti sortirati!</p>
+    </div>
+    <div class="card3">
+        <table id="tablicaZadaca2">Zadaci iz zadaće 2:
+            <thead>
+                <tr>
+                    <th scope="col">Redni broj zadatka</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Dodatan opis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>U server direktoriju sa npm start pokreće se server koji koristi već buildani angular.<br>
+                        U angular direktoriju sa npm start pokreće se angular projekt (kao ng server zapravo). Ovo nije potrebno
+                        da bi se zadaća testirala!
+                    </td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>Ključevi za TMDB servis su izbrisani.<br>
+                        Ključevi za recaptchu i github login su namjerno ostavljeni
+                        u konfiguracijskoj datoteci ako tester nije napravio / ne želi
+                        koristiti svoje ključeve za potrebe testiranja, ali se mogu izmijeniti
+                        sa vlastitima.
+                    </td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>Zadaća je zamišljena da se poslužuje sa npm start iz direktorija server.<br>
+                        Nije zamišljeno da se dodatno pokreće angular projekt sa ng serve.
+                    </td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>Dokumentacija se poslužuje samo preko pozadinskog dijela
+                        jer nije bilo obavezno raditi ju i na angular dijelu.
+                    </td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>Napravljeno s environment datotekom.</td>
+                </tr>
+                <tr>
+                    <td>11.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>12.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>Dodano na 3 obavezna obrasca. <br>Moguće je da logo recaptche
+                        ostane vidljiv nakon korištenja nekog od obrazaca. Kako bi
+                        se uklonio potrebno je refreshati stranicu.<br>
+                        Potrebno je obratiti pažnju na ključeve jer se isti povlače iz
+                        konfiguracijske datoteke. Ključevi su označeni sa recaptcha prefikosom.
+                    </td>
+                </tr>
+                <tr>
+                    <td>13.</td>
+                    <td style="color: blue;">napravljeno</td>
+                    <td>Napravljeno i sa tekstualnim prikazom i sa QR kodom.<br>
+                        TOTP polje se prikazuje na dnu stranice (ako se odmah ne uoči
+                        zbog dizajna same stranice).<br>
+                        Da bi se QR kod koristio, preporučam Google authentificator jer on podržava SHA-512,
+                        sa istim se skenira QR kod i totp se automatski generira.
+                    </td>
+                </tr>
+                <tr>
+                    <td>14.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>Kada se korisnik prijavljuje a ima totp, prvo mora pokušati
+                        se prijaviti bez totp-a te tek onda će ga tražiti da unese isti.
+                        Konfiguracija za totp je kao na vježbama (SHA-512, 60sec, 6 znamenki).
+                    </td>
+                </tr>
+                <tr>
+                    <td>15.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>Prilikom prijave odnosno nakon usmjeravanja na početnu
+                        stranicu zna se desiti greška da se ne prikaže navigacija.
+                        U tom slučaju samo refreshajte stranicu.<br>
+                        Također potrebno je obratiti pažnju na ključeve za github prijavu jer
+                        se isti povlače iz konfiguracijske datoteke.
+                        Ključevi su označeni sa github prefikosm.
+                    </td>
+                </tr>
+                <tr>
+                    <td>16.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>17.</td>
+                    <td style="color: green;">napravljeno</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>18.</td>
+                    <td style="color: red;">nije napravljeno</td>
+                    <td>/</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

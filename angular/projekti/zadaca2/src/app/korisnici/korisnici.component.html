@@ -1,0 +1,16 @@
+<div *ngIf="!admin">Samo admin ima pristup!</div>
+<div *ngIf="admin">
+  <div *ngIf="korisnici">
+    <ul>
+      <li *ngFor="let korisnik of korisnici">
+        <div *ngFor="let key of getKorisnikKeys(korisnik)">
+          <strong>{{ key }}:</strong> {{ korisnik[key] }}
+        </div>
+        <button type="button" (click)="obrisiKorisnika(korisnik['korime'])" class="obrisiButton">Obriši korisnika!</button>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!korisnici">
+    <p>Nema podataka...</p>
+  </div>
+</div>

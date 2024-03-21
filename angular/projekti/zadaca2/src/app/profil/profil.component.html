@@ -1,0 +1,40 @@
+<div *ngIf="!loggedIn">Potrebno se je prijaviti!</div>
+<div *ngIf="githubKorisnik">Github korisnici nemaju mogućnost korisničkog profila!</div>
+<div *ngIf="loggedIn && !githubKorisnik" class="prikaz">
+    <div class="ispis" *ngIf="ispis != '' ">{{ispis}}</div>
+    <div class="uspjeh" *ngIf="uspjeh != '' ">{{uspjeh}}</div>
+    <form (submit)="validiraj()" class="regUpdForm">
+        <label for="ime">Ime: </label>
+        <input type="text" name="ime" [(ngModel)]="ime" [value]="ime" required><br>
+        <label for="prezime">Prezime: </label>
+        <input type="text" name="prezime" [(ngModel)]="prezime" [value]="prezime" required><br>
+        <label for="korime">Korisničko ime: </label>
+        <input type="text" name="korime" [(ngModel)]="korime" [value]="korisnickoIme" disabled><br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" [(ngModel)]="email" [value]="email" required><br>
+        <label for="hashiranaLozinka">Hashirana lozinka: </label>
+        <input type="text" name="hashiranaLozinka" [value]="hashiranaLozinka" disabled><br>
+        <label for="lozinka">Nova lozinka: </label>
+        <input type="text" name="lozinka" [(ngModel)]="lozinka"><br>
+        <label for="adresa">Adresa: </label>
+        <input type="text" name="adresa" [(ngModel)]="adresa" [value]="adresa" required><br>
+        <label for="postanskiBroj">Poštanski broj: </label>
+        <input type="text" name="postanskiBroj" [(ngModel)]="postanskiBroj" [value]="postanskiBroj" required><br>
+        <label for="brojMobitela">Broj mobitela: </label>
+        <input type="text" name="brojMobitela" [(ngModel)]="brojMobitela" [value]="brojMobitela" required><br>
+        <label for="tipKorisnika">Tip korisnika: </label>
+        <input type="text" name="tipKorisnika" [(ngModel)]="tip_korisnika_id" [value]="tip_korisnika_id" disabled><br>
+
+        <div class="checkboxDiv">
+            <label for="2fa">2 Factor Authentication</label>
+            <input type="checkbox" id="dvaFA" name="dvaFA" [(ngModel)]="ukljuciCheckbox" class="checkbox">
+        </div>
+        <button type="submit" id="azuriraj" class="submitButton">Ažuriraj podatke</button>
+    </form>
+
+    <br><br><div *ngIf="totpOn" class="totp">
+        <label>TOTP (scroll ili triple click da vidiš cijelu vrijednost): </label>
+        <input type="text" id="totpVrijednost" name="totpVrijednost" [(ngModel)]="totpVrijednost" [value]="totpVrijednost" disabled>
+        <qrcode [qrdata]="qrKodUrl"></qrcode>
+    </div>
+</div>

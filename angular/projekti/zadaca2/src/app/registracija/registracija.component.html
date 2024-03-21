@@ -1,0 +1,24 @@
+<div *ngIf="!admin">Samo admin može pristupiti registraciji!</div>
+<div *ngIf="admin">
+  <div>{{ispis}}</div>
+  <form (submit)="validiraj()" class="regUpdForm">
+      <label for="ime">Ime: </label>
+      <input type="text" name="ime" [(ngModel)]="ime" required><br>
+      <label for="prezime">Prezime: </label>
+      <input type="text" name="prezime" [(ngModel)]="prezime" required><br>
+      <label for="korime">Korisničko ime: </label>
+      <input type="text" name="korime" [(ngModel)]="korime" required><br>
+      <label for="email">Email: </label>
+      <input type="email" name="email" [(ngModel)]="email" required><br>
+      <label for="lozinka">Lozinka: </label>
+      <input type="password" name="lozinka" [(ngModel)]="lozinka" required><br>
+      <label for="adresa">Adresa: </label>
+      <input type="text" name="adresa" [(ngModel)]="adresa" required><br>
+      <label for="postanskiBroj">Poštanski broj: </label>
+      <input type="text" name="postanskiBroj" [(ngModel)]="postanskiBroj" required><br>
+      <label for="brojMobitela">Broj mobitela: </label>
+      <input type="text" name="brojMobitela" [(ngModel)]="brojMobitela" required><br>
+      <button type="submit" id="registracija" class="submitButton">Registriraj</button>
+    </form>
+    <div id="recaptchaContainer"></div>
+</div>

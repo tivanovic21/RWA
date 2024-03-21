@@ -1,0 +1,50 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  
+    .forma, .formaGithub, .loginPodaci {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 5px;
+  
+      & label {
+        display: block;
+        margin-bottom: 10px;
+      }
+  
+      & input, & button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+  
+      .error-message {
+        border: 2px solid red;
+        background-color: pink;
+        color: brown;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+    }
+  
+    .loginPodaci {
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+  
+      li {
+        border: 1px solid #ddd;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+      
+        strong {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <title>Prijava</title>
+    <meta charset="UTF-8">
+    <link href="/css/tivanovic21.css" rel="stylesheet" type="text/css">
+    <script src="/jsaplikacija/autentifikacija.js"></script>
+    <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector('form').addEventListener('submit', function (event) {
+                var korimeValue = document.querySelector('input[name="korime"]').value;
+                var lozinkaValue = document.querySelector('input[name="lozinka"]').value;
+                if (!/\S/.test(korimeValue) || !/\S/.test(lozinkaValue)) {
+                    alert('Molimo vas da popunite sva polja.');
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>Prijava</header>
+    <nav>#navigacija#</nav>
+    <main>
+        <div id="poruka">#poruka#</div>
+        <form action="/prijava" method="POST">
+            <label for="korime">Korisničko ime</label>
+            <input name="korime" type="text">
+            <label for="lozinka">Lozinka</label>
+            <input name="lozinka" type="text">
+            <button type="submit" id="prijavabutton">Šalji</button>
+        </form>
+        <div id="podaci">
+            <ul>Nužni podaci za prijavu (korime, lozinka)
+                <li>admin, rwa</li>
+                <li>obican, rwa</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

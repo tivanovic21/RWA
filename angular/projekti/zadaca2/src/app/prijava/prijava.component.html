@@ -1,0 +1,34 @@
+<h1>Prijava</h1>
+<main>
+    <form class="forma" (submit)="prijavi()">
+        <div *ngIf="greska" class="error-message">
+            {{ greska }}
+        </div>
+        <div class="prijava">
+            <label for="korime">Korisničko ime: </label>
+            <input class="form-control" required type="text" [(ngModel)]="korime"><br>
+            <label for="lozinka">Lozinka: </label>
+            <input class="form-control" required type="password" [(ngModel)]="lozinka"><br>
+
+            <div *ngIf="greska == 'totp' || greska=='krivi totp'" style="border-color: red; border-style: double;">
+                <label for="totp">Unesi totp: </label>
+                <input type="text" name="totp" id="totp" [(ngModel)]="totp">
+            </div>
+
+            <button type="submit" class="submitButton">Šalji</button>
+        </div>
+    </form>
+
+    <div class="github">
+        <form class="formaGithub">
+            <label for="github">Prijavi se sa github računom: </label>
+            <button type="submit" (click)="githubPrijava()" class="githubButton">Github</button>
+        </form>
+    </div>
+    <div class="loginPodaci">
+        <ul>Login podaci:
+            <li>admin : rwa</li>
+            <li>obican : rwa</li>
+        </ul>
+    </div>
+</main>

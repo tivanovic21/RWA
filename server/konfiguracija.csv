@@ -1,0 +1,10 @@
+jwtValjanost=3000
+jwtTajniKljuc=KCFTBDRBYCWVLZPGIFKVUMCOEQBNKAGJKOJMDBVOFDPNVLSOCD
+tajniKljucSesija=JWVBWEDWKHXTFPMUFIUCNPMAYUGCXQCYCLXYZYNAZGZJPMJCLR
+appStranicenje=5
+tmdb.apikey.v3=
+tmdb.apikey.v4=
+recaptcha.sitekey=6Ler90QpAAAAAHeHxWHKz_H6ZiBnx305XO_AB11B
+recaptcha.secretkey=6Ler90QpAAAAAOr52mupustriYoj1R4gnd6Yo0OF
+github.clientid=efb0aef89344a2175f41
+github.TajniKljuc=4a6289a0dd7c0de6956fef192a0aca0b4da6cdfc

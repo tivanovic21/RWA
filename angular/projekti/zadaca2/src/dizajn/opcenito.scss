@@ -1,0 +1,51 @@
+main {
+  margin-top: 20px;
+}
+
+p {
+  color: white;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: yellow;
+  color: black;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: darkorange;
+    color: white;
+  }
+}
+
+#stranicenje {
+  margin-top: 10px;
+
+  button {
+    margin: 0 5px;
+    padding: 5px 8px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #eee;
+    }
+
+    &.active {
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+    }
+  }
+}

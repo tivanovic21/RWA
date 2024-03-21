@@ -1,0 +1,46 @@
+<nav>
+    <div *ngIf="admin && prijavljen">
+        <a routerLink="" (click)="putanja='' ">Početna</a>
+        <a routerLink="/prijava" (click)="putanja='prijava'" routerLinkActive="active" >Prijava</a>
+        <a routerLink="/registracija" (click)="putanja='registracija'" routerLinkActive="active">Registracija</a>
+        <a [href]="dokumentacijaURL">Dokumentacija</a>
+        <a routerLink="/favoriti" (click)="putanja='favoriti'" routerLinkActive="active">Favoriti</a>
+        <a routerLink="/profil" (click)="putanja='profil'" routerLinkActive="active">Profil korisnika</a>
+        <a routerLink="/korisnici" (click)="putanja='korisnici'" routerLinkActive="active">Korisnici</a>
+        <a routerLink="/dnevnik" (click)="putanja='dnevnik'" routerLinkActive="active">Dnevnik</a>
+        <a routerLink="/odjava" (click)="putanja='odjava'" routerLinkActive="active">Odjava</a>
+    </div>
+    <div *ngIf="prijavljen && !admin && !githubKorisnik">
+        <a routerLink="" (click)="putanja=''">Početna</a>
+        <a [href]="dokumentacijaURL">Dokumentacija</a>
+        <a routerLink="/favoriti" (click)="putanja='favoriti'" routerLinkActive="active">Favoriti</a>
+        <a routerLink="/profil" (click)="putanja='profil'" routerLinkActive="active">Profil korisnika</a>
+        <a routerLink="/odjava" (click)="putanja='odjava'" routerLinkActive="active">Odjava</a>
+    </div>
+    <div *ngIf="prijavljen && githubKorisnik">
+        <a routerLink="" (click)="putanja=''">Početna</a>
+        <a [href]="dokumentacijaURL">Dokumentacija</a>
+        <a routerLink="/favoriti" (click)="putanja='favoriti'" routerLinkActive="active">Favoriti</a>
+        <a routerLink="/odjava" (click)="putanja='odjava'" routerLinkActive="active">Odjava</a>
+    </div>
+    <div *ngIf="!prijavljen && !admin && !githubKorisnik">
+        <a routerLink="" (click)="putanja=''">Početna</a>
+        <a [href]="dokumentacijaURL">Dokumentacija</a>
+        <a routerLink="/prijava" (click)="putanja='prijava'" routerLinkActive="active">Prijava</a>
+    </div>
+</nav><br>
+<main>
+    <div *ngIf="!prijavljen && !admin && !githubKorisnik">
+        <p>Dobrodošli na TMDBSerije.</p>
+        <p>
+            Prije pokretanja aplikacije, molim Vas pročitajte dokumentaciju,
+            posebno ako testirate 2FA, TOTP, github ili slično.
+        </p>
+        <p>
+            Prilikom testiranja, molim Vas dopustite stranici da se učita do kraja prije nego pokrenete
+            neku drugu akciju. Da bi se aplikacija testirala kako je zamišljeno, pozicionirajte se u server
+            folder i pokrenite npm start. Zadaća se poslužuje na localhost:12369
+        </p>
+    </div>
+    <router-outlet></router-outlet>
+</main>

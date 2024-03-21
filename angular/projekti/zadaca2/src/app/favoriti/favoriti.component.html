@@ -1,0 +1,36 @@
+<div *ngIf="!loggedIn">
+    <p>Prijavi se kako bi vidio svoje favorite!</p>
+</div>
+<div *ngIf="loggedIn">
+    <div *ngIf="ispis !== 'Nemaš favorita!'">
+        <table *ngFor="let favorit of favoriti" style='border-collapse: collapse; border: 1px solid black; margin-bottom: 20px;'>
+            <tr>
+                <th style='border: 1px solid black;'><b>Parametar</b></th>
+                <th style='border: 1px solid black;'><b>Vrijednost</b></th>
+            </tr>
+            <tr *ngFor="let parametar of getFavoritiKeys(favorit)" style='border: 1px solid black;'>
+                <ng-container *ngIf="parametar !== 'seasons'">
+                    <td style='border: 1px solid black;'>{{ parametar }}</td>
+                    <td *ngIf="parametar === 'slika' || parametar === 'poster_path'" style='border: 1px solid black;'>
+                        <img src='https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ favorit[parametar] }}' width='100' alt='slika_{{ favorit["naziv"] }}'/>
+                        <ng-container *ngIf="parametar === 'poster_path'">
+                            <span [hidden]="true">{{ favorit[parametar] }}</span>
+                        </ng-container>
+                    </td>
+                    <td *ngIf="parametar === 'poveznica' || parametar === 'homepage' " style='border:1px solid black;'>
+                        <a href='{{ favorit[parametar] }}' target='_blank'>{{ favorit[parametar] }}</a>
+                    </td>
+                    <td *ngIf="parametar !== 'slika' && parametar !== 'poster_path' && parametar !== 'poveznica' && parametar !== 'homepage' && parametar !== 'seasons'" style='border: 1px solid black;'>{{ favorit[parametar] }}</td>
+                </ng-container>
+            </tr>
+            <tr style='border: 1px solid black;'>
+                <td colspan="2">
+                    <button (click)="preusmjeri(favorit.id)">Prikaži detalje</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="ispis === 'Nemaš favorita!'">
+        <p>{{ ispis }}</p>
+    </div>
+</div>

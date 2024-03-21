@@ -1,0 +1,114 @@
+.forma, h1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  label {
+    margin-bottom: 8px;
+  }
+
+  input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .submitButton {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .submitButton:hover {
+    background-color: #0056b3;
+  }
+}
+
+.regUpdForm {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  input {
+    width: calc(100% - 10px);
+    padding: 1px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    border-color: orange;
+  }
+
+
+  .submitButton {
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.ispis {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: pink;
+  border: red;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.uspjeh {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: greenyellow;
+  border: green;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.totp {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2px;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  input {
+    width: calc(100% - 10px);
+    padding: 1px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  input:focus {
+    border: orange;
+  }
+}
+
+  
+  

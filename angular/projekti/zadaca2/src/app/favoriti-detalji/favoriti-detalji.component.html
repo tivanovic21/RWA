@@ -1,0 +1,36 @@
+<div *ngIf="!loggedIn">
+    <p>{{ ispis }}</p>
+  </div>
+  <div *ngIf="loggedIn">
+    <div *ngIf="!ispis">
+      <ul class="serija">Serija:
+        <li *ngFor="let podatak of getFavoritiKeys(favoriti)">
+          <div *ngIf="podatak === 'slika' || podatak === 'poster_path' ">
+            {{ podatak }}: <img src='https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ favoriti[podatak] }}' width='100' alt='slika_filma' />
+          </div>
+          <div *ngIf="podatak === 'poveznica' || podatak === 'homepage'">
+            {{ podatak }}: <a href='{{ favoriti[podatak] }}' target='_blank'>{{ favoriti[podatak] }}</a>
+          </div>
+          <div *ngIf="podatak !== 'slika' && podatak !== 'poveznica' && podatak !== 'poster_path' && podatak !== 'homepage' ">
+            {{ podatak }}: {{ favoriti[podatak] }}
+          </div>
+        </li>
+      </ul>
+      <div *ngFor="let sezona of sezone; let i = index" class="sezona">
+        <ul>
+          <li *ngFor="let podatak of getFavoritiKeys(sezona)">
+            <div *ngIf="podatak === 'slika' || podatak === 'poster_path'">
+              {{ podatak }}: <img src='https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{ sezona[podatak] }}' width='100' alt='slika_sezone' />
+            </div>
+            <div *ngIf="podatak !== 'slika' && podatak!=='poster_path' ">
+              {{ podatak }}: {{ sezona[podatak] }}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div *ngIf="ispis">
+    <p>{{ispis}}</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,16 @@
+<div id="poruka">{{ispis}}</div>
+<div *ngIf="serijaDetails">
+    <ul>
+        <li><b>Naziv: </b>{{serijaDetails.original_name}}</li>
+        <li><b>Opis: </b>{{serijaDetails.overview}}</li>
+        <li><b>Broj sezona: </b>{{serijaDetails.number_of_seasons}}</li>
+        <li><b>Broj epizoda: </b>{{serijaDetails.number_of_episodes}}</li>
+        <li><b>Popularnost: </b>{{serijaDetails.popularity}}</li>
+        <li><b>Slika: </b><img width="auto" height="400" [src]="serijaDetails.poster_path" [alt]="serijaDetails.original_name"></li>
+        <li><b>Poveznica na vanjsku stranicu: </b><a [href]="serijaDetails.homepage" target="_blank">{{serijaDetails.homepage}}</a></li>
+    </ul>
+    <div *ngIf="loggedIn" class="button">
+        <button type="button" id="dodajFavorit" (click)="dodajFavorit(serijaDetails.id)">Dodaj u favorite</button>
+    </div>
+</div>
+  

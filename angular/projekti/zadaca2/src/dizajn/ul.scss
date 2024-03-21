@@ -1,0 +1,64 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+li {
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+
+  strong {
+    margin-right: 5px;
+  }
+
+  .obrisiButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #c82333;
+    }
+  }
+}
+
+.serija, .sezona {
+  width: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  div {
+    margin-bottom: 10px;
+
+    strong {
+      margin-right: 5px;
+    }
+  }
+}
+
+.serija {
+  background-color: whitesmoke;
+  border: 2px solid gainsboro;
+}
+
+.sezona {
+  background-color: lightgrey;
+  border: 2px solid grey;
+}
